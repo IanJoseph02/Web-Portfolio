@@ -1,47 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dark Mode</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles3.css">
-    <title>Page 3</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Mark Balangue - Contact</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'>
+    <link rel='stylesheet' href='styles.css'>
+    <link rel='stylesheet' href='styles3.css'>
 </head>
 <body>
-    <div class="switch">Dark mode:
-        <span class="inner-switch">OFF</span>
+    <div class='theme-switch-wrapper'>
+        <label class='theme-switch' for='checkbox'>
+            <input type='checkbox' id='checkbox' />
+            <div class='slider round'></div>
+        </label>
+        <em>Dark Mode</em>
     </div>
-    <a href="1stpage.html">Go Back to Home Page</a>
-    <a href="Secondpage.html">Go to Page 2</a>
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <img src="anew.jpg" alt="Image 3">
-    <p>List</p>
-    <ul>
-        <li>Choose want makes you happy</li>
-        <li>Be limitless</li>
-        <li>Go travel</li>
-    </ul>
-    <p>Life is an adventurous journey, full of twists and turns that lead us to new horizons. As J.R.R. Tolkien once said, 'It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to.' Embrace the thrill of the unknown, for, as Helen Keller reminds us, 'Life is either a daring adventure or nothing at all.' Each day is an opportunity to explore, learn, and grow. In the words of Mark Twain, 'Twenty years from now, you will be more disappointed by the things you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover</p>
-    <a href="1stpage.html">Go Back to Home Page</a>
-    <a href="Secondpage.html">Go to Page 2</a>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="script.js"></script>
+
+    <header>
+        <nav>
+            <div class='logo'>
+                <h1>Mark Balangue</h1>
+            </div>
+            <ul>
+                <li><a href='1stpage.html'><i class='fas fa-home'></i> Home</a></li>
+                <li><a href='Secondpage.html'><i class='fas fa-code'></i> Skills</a></li>
+                <li><a href='3rdpage.html'><i class='fas fa-envelope'></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id='contact' class='section'>
+            <div class='container'>
+                <h2>Contact Me</h2>
+                <div class='contact-container'>
+                    <div class='contact-form'>
+                        <form id='contact-form'>
+                            <div class='form-group'>
+                                <label for='name'><i class='fas fa-user'></i> Name</label>
+                                <input type='text' id='name' name='name' required>
+                            </div>
+                            
+                            <div class='form-group'>
+                                <label for='email'><i class='fas fa-envelope'></i> Email</label>
+                                <input type='email' id='email' name='email' required>
+                            </div>
+                            
+                            <div class='form-group'>
+                                <label for='message'><i class='fas fa-comment'></i> Message</label>
+                                <textarea id='message' name='message' required></textarea>
+                            </div>
+                            
+                            <button type='submit' class='btn'>Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class='contact-inspiration'>
+                        <h3>Life Philosophy</h3>
+                        <blockquote>
+                            <p>"Life is an adventurous journey, full of twists and turns that lead us to new horizons."</p>
+                            <ul class='inspiration-list'>
+                                <li><i class='fas fa-heart'></i> Choose what makes you happy</li>
+                                <li><i class='fas fa-infinity'></i> Be limitless</li>
+                                <li><i class='fas fa-plane'></i> Go travel</li>
+                            </ul>
+                            <p>As J.R.R. Tolkien said, 'It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to.'</p>
+                            <p>As Helen Keller reminds us, 'Life is either a daring adventure or nothing at all.' Each day is an opportunity to explore, learn, and grow. In the words of Mark Twain, 'Twenty years from now, you will be more disappointed by the things you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mark Balangue. All Rights Reserved.</p>
+    </footer>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
+    <script src='script.js'></script>
 </body>
 </html>

@@ -1,120 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Portfolio Template</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:300,400,700"rel="stylesheet'>
-    <link rel="stylesheet" href="styles1.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dark Mode</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="switch">Dark mode:
-        <span class="inner-switch">OFF</span>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Mark Balangue - Portfolio</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+    <div class='theme-switch-wrapper'>
+        <label class='theme-switch' for='checkbox'>
+            <input type='checkbox' id='checkbox' />
+            <div class='slider round'></div>
+        </label>
+        <em>Dark Mode</em>
     </div>
-  <header>
+
     <header>
-      <nav>
-          <ul>
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#education">Education</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="Secondpage.html">Skills</a></li>
-              <li><a href="https://github.com/krammy01/PHPprojects">Projects</a></li>
-              <li><a href="3rdpage.html">Contact Information</a></li>
-          </ul>
-      </nav>
-  </header>
-  </header>
-  <section id="about">
-      <div class="container">
-          <h2>Who I Am</h2>
-          <hr>
-          <img src="Mark.jpg" alt="dance with me">
-          <p class="lead">Web student & Web Developer</p>
-          <p> <span class="bold">I'm Mark Balangue, a Students and Front-end Developer</span>
-          <p> <span class="bold">I love watching anime actions and adventure genres also romance.</span>
-          <p> <span class="bold">I want to travel and become successful in life and want a peaceful life</span>
-          <p> <span class="bold">Aside from that, I like learning new knowledge, playing and waching sports.</span>
-      </div>
-  </section>
-  <section id="education">
-  <section id="portfolio">
-    <img src="education.jpg" alt="dance with me">
-      <h2>Education</h2>
-      <hr>
-        <div class="education">
-            <article>
-                <h1>Elementary</h1>
-                <ul>
-                    <p>Mababang Paaralang Juan C. Laya<p>
-                    </ul>
-            <article>
-          </div>
-  
-          <div class="education">
-            <h1>High School</h1>
-                <ul>
-                    <p>Mataas na Paaralang Juan C. Laya</p>
-                    </ul>
-          </div>
-  
-          <div class=education">
-            <h1>College</h1>
+        <nav>
+            <div class='logo'>
+                <h1>Mark Balangue</h1>
+            </div>
             <ul>
-                <p>Still studying Information technology @University of Cordilleras</p>
-                </ul>
-          </div>
-          <section id="experience">
-          <section id="portfolio">
-            <img src="adventure2.jpg" alt="dance with me">
-              <h2>Experience</h2>
-              <hr>
-              <article>
-                <article>
-                          <div class="h3">
-                      <h2>Programming Techniques</h2>
-                      <ul>
-                          <li>Developed complex algorithms and data structures using java and Python.</li>
-                          <li>Completed a semester with project involving the creation of a dynamic web appilication</li>
-                          </ul>
-                      <div class="h3">
-                  <article>
-                      <article>
-                <div class="h1">
-                    <div class="h2">
-                <h2>Database Management Systems</h2>
-                <ul>
-                    <li>Designed and implemented relational databases using MySQL.</li>
-                    <li>Gained a little experience with SQL queries, normalization, and database security</li>
-                    </ul>
-                <div class="h2">
-            <article>
-                <article>
-                        <div class="h3">
-                    <h2>Network Security</h2>
-                    <ul>
-                        <li>Studied principles of network security, including encryption, firewalls, and intrusion detection systems.</li>
-                        <li>Conducted a basic configuration project set up in an office</li>
+                <li><a href='#about'><i class='fas fa-user'></i> About Me</a></li>
+                <li><a href='#education'><i class='fas fa-graduation-cap'></i> Education</a></li>
+                <li><a href='#experience'><i class='fas fa-briefcase'></i> Experience</a></li>
+                <li><a href='Secondpage.html'><i class='fas fa-code'></i> Skills</a></li>
+                <li><a href='https://github.com/krammy01/PHPprojects' target='_blank'><i class='fab fa-github'></i> Projects</a></li>
+                <li><a href='3rdpage.html'><i class='fas fa-envelope'></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id='about' class='section'>
+            <div class='container'>
+                <h2>Who I Am</h2>
+                <div class='profile-container'>
+                    <img src='Mark.jpg' alt='Mark Balangue' class='profile-image'>
+                    <div class='profile-text'>
+                        <p class='lead'>Web Student & Front-end Developer</p>
+                        <p>I'm <strong>Mark Balangue</strong>, a passionate student and aspiring front-end developer.</p>
+                        <p>I love exploring anime in action, adventure, and romance genres.</p>
+                        <p>My goals are to travel the world, achieve success, and live a peaceful life.</p>
+                        <p>I'm constantly eager to learn new knowledge and enjoy sports.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id='education' class='section'>
+            <div class='container'>
+                <h2>Education</h2>
+                <div class='education-grid'>
+                    <div class='education-item'>
+                        <h3>Elementary</h3>
+                        <p>Mababang Paaralang Juan C. Laya</p>
+                    </div>
+                    <div class='education-item'>
+                        <h3>High School</h3>
+                        <p>Mataas na Paaralang Juan C. Laya</p>
+                    </div>
+                    <div class='education-item'>
+                        <h3>College</h3>
+                        <p>Studying Information Technology @ University of Cordilleras</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id='experience' class='section'>
+            <div class='container'>
+                <h2>Experience</h2>
+                <div class='experience-grid'>
+                    <div class='experience-item'>
+                        <h3>Programming Techniques</h3>
+                        <ul>
+                            <li>Developed complex algorithms and data structures using Java and Python</li>
+                            <li>Created dynamic web applications during semester projects</li>
                         </ul>
-                    <div class="h3">
-                <article>
-                    <article>
-  
-          <div class="project">
-            <h3>Wants more about Me</h3>
-          </div>
-          <a href="Secondpage.html">Go to Page 2</a>
+                    </div>
+                    <div class='experience-item'>
+                        <h3>Database Management Systems</h3>
+                        <ul>
+                            <li>Designed and implemented relational databases using MySQL</li>
+                            <li>Gained experience with SQL queries, normalization, and database security</li>
+                        </ul>
+                    </div>
+                    <div class='experience-item'>
+                        <h3>Network Security</h3>
+                        <ul>
+                            <li>Studied principles of network security, including encryption and firewalls</li>
+                            <li>Conducted basic network configuration projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class='navigation-link'>
+            <a href='Secondpage.html' class='btn'>Explore More About Me</a>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="script.js"></script>
-      </section>
-                  </div>
-              </div>
-          </div>
-      </div
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mark Balangue. All Rights Reserved.</p>
+    </footer>
+
+    <script src='script.js'></script>
+</body>
+</html>
