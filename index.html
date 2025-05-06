@@ -20,41 +20,152 @@
 
   <nav>
     <ul>
-      <li><a href="1stpage.html">1st Page</a></li>
-      <li><a href="Secondpage.html">2nd Page</a></li>
-      <li><a href="3rdpage.html">3rd Page</a></li>
-      <li><a href="4thpages.html">4th Page</a></li>
+      <li><a href="introduction.html">home</a></li>
+      <li><a href="1stpage.html">Profile</a></li>
+      <li><a href="secondpage.html">Skills and Projects</a></li>
       <li><a href="resume.html">Resume</a></li>
+      <li><a href="3rdpage.html">Contact</a></li>
     </ul>
   </nav>
 
   <main>
     <section>
-      <h2>About Me</h2>
-      <p>Hi! I'm Ian Joseph Alvarado and this is my personal portfolio website.</p>
-      <img src="education.jpg" alt="Education" width="300" />
-    </section>
+        <h2>Introduction</h2>
+        <p><strong>BS in Computer Engineering</strong></p>
+        <p>I am Ian Joseph Alvarado.</p>
+        <p>A motivated and passionate college student currently pursuing a Bachelor of Science in Computer Engineering at PHINMA University of Pangasinan. Eager to secure a summer internship to expand knowledge and gain hands-on experience in software and hardware development, particularly in areas involving computer systems and emerging technologies. Skilled in performing basic diagnostic testing and maintaining a working knowledge of computer-related equipment to support troubleshooting and repairs. Committed to continuous learning, with strong analytical and problem-solving skills.</p>
+      </section>
 
     <section>
-      <h2>Projects</h2>
+      <h2>Resume </h2>
       <p>Check out my projects below:</p>
       <ul>
         <li><a href="random.html">Random Generator</a></li>
         <li><a href="LINE-FOLLOWING-ROBOT-using-AR.html">Line Following Robot</a></li>
       </ul>
     </section>
+  <!-- Certificates -->
+<!-- Certificates -->
+<section>
+    <h2>Certificates</h2>
+  
+    <div class="cert-container">
+      <p><strong>CpE InfoCruise Certificate</strong></p>
+      <img src="4th yr CpE InfoCruise Certs-pages-26.png" alt="CpE InfoCruise" class="modal-img" width="300" />
+  
+      <p><strong>Wired for Tomorrow Certificate</strong></p>
+      <img src="Certificate Webinar.png" alt="Wired for Tomorrow" class="modal-img" width="300" />
+  
+      <p><strong>ICpEP-Regional 1 CpE Day 1</strong></p>
+      <img src="Certificate Reg1_day1.png" alt="Day 1" class="modal-img" width="300" />
+  
+      <p><strong>ICpEP-Regional 1 CpE Day 2</strong></p>
+      <img src="Certificate Reg1_day2.png" alt="Day 2" class="modal-img" width="300" />
+  
+      <p><strong>e-Dive Certificate</strong></p>
+      <img src="Certificate in Mindoro.png" alt="Mindoro" class="modal-img" width="300" />
+  
+      <p><strong>MATLAB Onramp Certificate</strong></p>
+      <img src="Alvarado_MATLAB Certificate.png" alt="MATLAB" class="modal-img" width="300" />
+    </div>
+  </section>
+  
+  <!-- Modal container -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+  
+  <!-- Modal CSS (can be moved to your stylesheet) -->
+  <style>
+    .modal-img {
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+  
+    .modal-img:hover {
+      transform: scale(1.02);
+    }
+  
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.8);
+    }
+  
+    .modal-content {
+      display: block;
+      margin: 5% auto;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 12px;
+    }
+  
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  
+    .close:hover {
+      color: #ccc;
+    }
+  </style>
+  
+  <!-- Modal JavaScript S-->
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.getElementsByClassName("close")[0];
+    const thumbnails = document.querySelectorAll(".modal-img");
+  
+    thumbnails.forEach(img => {
+      img.onclick = () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+      };
+    });
+  
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+    };
+  
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 
-    <section>
-      <h2>Introduction</h2>
-      <p><strong>BS in Computer Engineering</strong></p>
-      <p>I am Ian Joseph Alvarado from BSCpE-2B.</p>
-      <p>Welcome to my digital introduction page. This site presents some of my achievements, interests, and experiences throughout my college life. Feel free to explore!</p>
-      <img src="adventure2.jpg" alt="Adventure" width="300" />
-    </section>
-  </main>
+  <!--Contacts-->
+  <div class="info">
+    <p>Personal Email: 
+      <a href="mailto:alvaradojoseph312002@gmail.com">alvaradojoseph312002@gmail.com</a>
+    </p>
+    <p>School Email: 
+      <a href="mailto:ianj.alvarado.up@phinmaed.com">ianj.alvarado.up@phinmaed.com</a>
+    </p>
+    <p>Phone: 
+      <a href="tel:+639065066651">+639065066651</a> / 
+      <a href="tel:+639951155467">+639951155467</a>
+    </p>
+  </div>
 
   <footer>
     <p>&copy; 2025 Ian Joseph Alvarado. All rights reserved.</p>
+
   </footer>
 
   <!-- JS -->
