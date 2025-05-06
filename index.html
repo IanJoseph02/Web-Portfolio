@@ -10,76 +10,74 @@
   <link rel="stylesheet" href="styles3.css" />
   <link rel="stylesheet" href="styles4.css" />
   <link rel="stylesheet" href="intro.css" />
-</head>
-<body>
 
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <img src="pfp.jpg" alt="Profile" style="width:150px; border-radius:50%;" />
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="introduction.html">home</a></li>
-      <li><a href="1stpage.html">Profile</a></li>
-      <li><a href="secondpage.html">Skills and Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="3rdpage.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section>
-        <h2>Introduction</h2>
-        <p><strong>BS in Computer Engineering</strong></p>
-        <p>I am Ian Joseph Alvarado.</p>
-        <p>A motivated and passionate college student currently pursuing a Bachelor of Science in Computer Engineering at PHINMA University of Pangasinan. Eager to secure a summer internship to expand knowledge and gain hands-on experience in software and hardware development, particularly in areas involving computer systems and emerging technologies. Skilled in performing basic diagnostic testing and maintaining a working knowledge of computer-related equipment to support troubleshooting and repairs. Committed to continuous learning, with strong analytical and problem-solving skills.</p>
-      </section>
-
-<!-- Certificates -->
-<section>
-    <h2>Certificates</h2>
-  
-    <div class="cert-container">
-      <p><strong>CpE InfoCruise Certificate</strong></p>
-      <img src="4th yr CpE InfoCruise Certs-pages-26.png" alt="CpE InfoCruise" class="modal-img" width="300" />
-  
-      <p><strong>Wired for Tomorrow Certificate</strong></p>
-      <img src="Certificate Webinar.png" alt="Wired for Tomorrow" class="modal-img" width="300" />
-  
-      <p><strong>ICpEP-Regional 1 CpE Day 1</strong></p>
-      <img src="Certificate Reg1_day1.png" alt="Day 1" class="modal-img" width="300" />
-  
-      <p><strong>ICpEP-Regional 1 CpE Day 2</strong></p>
-      <img src="Certificate Reg1_day2.png" alt="Day 2" class="modal-img" width="300" />
-  
-      <p><strong>e-Dive Certificate</strong></p>
-      <img src="Certificate in Mindoro.png" alt="Mindoro" class="modal-img" width="300" />
-  
-      <p><strong>MATLAB Onramp Certificate</strong></p>
-      <img src="Alvarado_MATLAB Certificate.png" alt="MATLAB" class="modal-img" width="300" />
-    </div>
-  </section>
-  
-  <!-- Modal container -->
-  <div id="modal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
-  </div>
-  
-  <!-- Modal CSS (can be moved to your stylesheet) -->
   <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header, nav, main, footer {
+      margin-bottom: 20px;
+    }
+
+    header img {
+      margin-top: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .cert-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .cert-container p {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
     .modal-img {
       cursor: pointer;
       border: 2px solid #ccc;
       border-radius: 8px;
       transition: 0.3s;
     }
-  
+
     .modal-img:hover {
       transform: scale(1.02);
     }
-  
+
     .modal {
       display: none;
       position: fixed;
@@ -90,7 +88,7 @@
       height: 100vh;
       background-color: rgba(0,0,0,0.8);
     }
-  
+
     .modal-content {
       display: block;
       margin: 5% auto;
@@ -98,29 +96,245 @@
       max-height: 80vh;
       border-radius: 12px;
     }
-  
+
     .close {
       position: absolute;
       top: 20px;
       right: 35px;
-      color: #fff;
       font-size: 40px;
       font-weight: bold;
       cursor: pointer;
     }
-  
+
     .close:hover {
       color: #ccc;
     }
+
+    .info {
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 10px;
+    }
+
+    /* Dark Mode Styling */
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .dark-mode header,
+    .dark-mode section,
+    .dark-mode nav ul,
+    .dark-mode .info {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+
+    .dark-mode nav a {
+      color: #90caf9;
+    }
+
+    .dark-mode nav a:hover {
+      color: #bbdefb;
+    }
+
+    .dark-mode .cert-container p {
+      color: #e0e0e0;
+    }
+
+    .dark-mode footer {
+      background-color: #000;
+      color: #bbb;
+    }
+
+    .dark-mode .modal {
+      background-color: rgba(0, 0, 0, 0.95);
+    }
+
+    .dark-mode .close {
+      color: #eee;
+    }
+
+    /* Light Mode Styling */
+    .light-mode {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .light-mode header,
+    .light-mode section,
+    .light-mode nav ul,
+    .light-mode .info {
+      background-color: #f5f5f5;
+      color: #000000;
+    }
+
+    .light-mode nav a {
+      color: #000000;
+    }
+
+    .light-mode nav a:hover {
+      color: #555555;
+    }
+
+    .light-mode footer {
+      background-color: #f1f1f1;
+      color: #555555;
+    }
+
+    .light-mode .modal {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .light-mode .close {
+      color: #000;
+    }
+
+    /* Toggle Switch Design */
+    .toggle-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .switch {
+      position: relative;
+      width: 60px;
+      height: 30px;
+      background-color: #ccc;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .switch:before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 24px;
+      height: 24px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    .switch.active {
+      background-color: #4caf50;
+    }
+
+    .switch.active:before {
+      transform: translateX(30px);
+    }
+
+    /* Text label */
+    .mode-label {
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
   </style>
-  
-  <!-- Modal JavaScript S-->
+</head>
+
+<body class="dark-mode">
+  <div class="toggle-container">
+    <div class="switch" id="mode-toggle"></div>
+    <span class="mode-label" id="mode-label">Dark Mode</span>
+  </div>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="introduction.html">Home</a></li>
+      <li><a href="1stpage.html">Profile</a></li>
+      <li><a href="secondpage.html">Skills and Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="3rdpage.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p><strong>BS in Computer Engineering</strong></p>
+      <p>I am Ian Joseph Alvarado.</p>
+      <p>
+        A motivated and passionate college student currently pursuing a Bachelor of Science in Computer Engineering at PHINMA University of Pangasinan. Eager to secure a summer internship to expand knowledge and gain hands-on experience in software and hardware development, particularly in areas involving computer systems and emerging technologies. Skilled in performing basic diagnostic testing and maintaining a working knowledge of computer-related equipment to support troubleshooting and repairs. Committed to continuous learning, with strong analytical and problem-solving skills.
+      </p>
+    </section>
+
+    <!-- Certificates -->
+    <section>
+      <h2>Certificates</h2>
+      <div class="cert-container">
+        <div>
+          <p><strong>CpE InfoCruise Certificate</strong></p>
+          <img src="4th yr CpE InfoCruise Certs-pages-26.png" alt="CpE InfoCruise" class="modal-img" width="300" />
+        </div>
+        <div>
+          <p><strong>Wired for Tomorrow Certificate</strong></p>
+          <img src="Certificate Webinar.png" alt="Wired for Tomorrow" class="modal-img" width="300" />
+        </div>
+        <div>
+          <p><strong>ICpEP-Regional 1 CpE Day 1</strong></p>
+          <img src="Certificate Reg1_day1.png" alt="Day 1" class="modal-img" width="300" />
+        </div>
+        <div>
+          <p><strong>ICpEP-Regional 1 CpE Day 2</strong></p>
+          <img src="Certificate Reg1_day2.png" alt="Day 2" class="modal-img" width="300" />
+        </div>
+        <div>
+          <p><strong>e-Dive Certificate</strong></p>
+          <img src="Certificate in Mindoro.png" alt="Mindoro" class="modal-img" width="300" />
+        </div>
+        <div>
+          <p><strong>MATLAB Onramp Certificate</strong></p>
+          <img src="Alvarado_MATLAB Certificate.png" alt="MATLAB" class="modal-img" width="300" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Contact Info -->
+    <div class="info">
+      <p>Personal Email: 
+        <a href="mailto:alvaradojoseph312002@gmail.com">alvaradojoseph312002@gmail.com</a>
+      </p>
+      <p>School Email: 
+        <a href="mailto:ianj.alvarado.up@phinmaed.com">ianj.alvarado.up@phinmaed.com</a>
+      </p>
+      <p>Phone: 
+        <a href="tel:+639065066651">+639065066651</a> / 
+        <a href="tel:+639951155467">+639951155467</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ian Joseph Alvarado. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal Script -->
   <script>
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modalImage");
     const closeBtn = document.getElementsByClassName("close")[0];
     const thumbnails = document.querySelectorAll(".modal-img");
-  
+
     thumbnails.forEach(img => {
       img.onclick = () => {
         modal.style.display = "block";
@@ -128,38 +342,36 @@
         modalImg.alt = img.alt;
       };
     });
-  
+
     closeBtn.onclick = () => {
       modal.style.display = "none";
     };
-  
+
     window.onclick = (event) => {
       if (event.target === modal) {
         modal.style.display = "none";
       }
     };
+
+    // Dark mode / Light mode toggle
+    const toggleBtn = document.getElementById("mode-toggle");
+    const modeLabel = document.getElementById("mode-label");
+
+    // Set the default mode based on localStorage
+    const currentMode = localStorage.getItem("mode") || "dark";
+    document.body.classList.add(currentMode + "-mode");
+
+    // Toggle the mode
+    toggleBtn.addEventListener("click", () => {
+      const newMode = document.body.classList.contains("dark-mode") ? "light" : "dark";
+      document.body.classList.remove("dark-mode", "light-mode");
+      document.body.classList.add(newMode + "-mode");
+      localStorage.setItem("mode", newMode);
+      modeLabel.textContent = newMode === "dark" ? "Dark Mode" : "Light Mode";
+
+      // Toggle switch style
+      toggleBtn.classList.toggle("active");
+    });
   </script>
 
-  <!--Contacts-->
-  <div class="info">
-    <p>Personal Email: 
-      <a href="mailto:alvaradojoseph312002@gmail.com">alvaradojoseph312002@gmail.com</a>
-    </p>
-    <p>School Email: 
-      <a href="mailto:ianj.alvarado.up@phinmaed.com">ianj.alvarado.up@phinmaed.com</a>
-    </p>
-    <p>Phone: 
-      <a href="tel:+639065066651">+639065066651</a> / 
-      <a href="tel:+639951155467">+639951155467</a>
-    </p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Ian Joseph Alvarado. All rights reserved.</p>
-
-  </footer>
-
-  <!-- JS -->
-  <script src="script.js"></script>
-</body>
-</html>
+</

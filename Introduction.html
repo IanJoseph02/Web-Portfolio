@@ -1,286 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='styles4.css'>
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='styles4.css'>
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-
-        /* Default Dark Mode */
-        body.dark-mode {
-            background-color: #121212;
-            color: #f0f0f0;
-        }
-
-        body.dark-mode header,
-        body.dark-mode nav {
-            background-color: #1f1f1f;
-        }
-
-        body.dark-mode nav a {
-            color: #ffdd57;
-        }
-
-        body.dark-mode .card {
-            background-color: #1e1e1e;
-            color: #f0f0f0;
-        }
-
-        /* Toggle Button */
-        .toggle-btn {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            background-color: #ffdd57;
-            border: none;
-            padding: 0.5rem 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 5px;
-            z-index: 1000;
-        }
-
-        header {
-            background-color: #0a56c9;
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            animation: slideDown 1s ease-out;
-        }
-
-        nav {
-            background-color: #08398c;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ffdd57;
-            transform: scale(1.1);
-        }
-
-        section {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
-        }
-
-        section:nth-child(even) {
-            animation-delay: 0.3s;
-        }
-
-        h2 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 0.5rem;
-        }
-
-        ul {
-            list-style-type: square;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideDown {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        /* Intro Section */
-        .intro-section {
-            height: 100vh;
-            background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-            background-color: rgba(10, 86, 201, 0.8);
-            z-index: 1;
-            opacity: 1;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .intro-content {
-            max-width: 800px;
-            z-index: 2;
-        }
-
-        .intro-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .intro-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        /* Animated Button */
-        .animated-button {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            padding: 16px 36px;
-            border: 4px solid;
-            border-color: transparent;
-            font-size: 16px;
-            background-color: inherit;
-            border-radius: 100px;
-            font-weight: 600;
-            color: greenyellow;
-            box-shadow: 0 0 0 2px greenyellow;
-            cursor: pointer;
-            overflow: hidden;
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .animated-button svg {
-            position: absolute;
-            width: 24px;
-            fill: greenyellow;
-            z-index: 9;
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .animated-button .arr-1 {
-            right: 16px;
-        }
-
-        .animated-button .arr-2 {
-            left: -25%;
-        }
-
-        .animated-button .circle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 20px;
-            height: 20px;
-            background-color: greenyellow;
-            border-radius: 50%;
-            opacity: 0;
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .animated-button .text {
-            position: relative;
-            z-index: 1;
-            transform: translateX(-12px);
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .animated-button:hover {
-            box-shadow: 0 0 0 12px transparent;
-            color: #212121;
-            border-radius: 12px;
-        }
-
-        .animated-button:hover .arr-1 {
-            right: -25%;
-        }
-
-        .animated-button:hover .arr-2 {
-            left: 16px;
-        }
-
-        .animated-button:hover .text {
-            transform: translateX(12px);
-        }
-
-        .animated-button:hover svg {
-            fill: #212121;
-        }
-
-        .animated-button:active {
-            scale: 0.95;
-            box-shadow: 0 0 0 4px #2ecc71;
-        }
-
-        .animated-button:hover .circle {
-            width: 220px;
-            height: 220px;
-            opacity: 1;
-        }
-
-        .button-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 300px;
-        }
-
-    </style>
 </head>
 
 <body class="dark-mode">
 
-    <!-- Toggle Button -->
-    <button class="toggle-btn" id="darkModeToggle">☀️</button>
+  <!-- Toggle Button -->
+  <button class="toggle-btn" id="darkModeToggle">☀️</button>
 
-    <!-- Header and Nav -->
-    <header>
-        <h1>Hello! I'm Ian Joseph Alvarado</h1>
-        <p>Computer Engineering Student</p>
-    </header>
+  <!-- Header and Nav -->
+  <header>
+    <h1>Hello! I'm Ian Joseph Alvarado</h1>
+    <p>Computer Engineering Student</p>
+  </header>
 
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#skills">Academic Projects</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Academic Projects</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- Intro Section -->
-    <section class="intro-section">
-        <div class="intro-content">
-            <h1>Welcome! I'm Ian Joseph Alvarado</h1>
-            <p>A passionate Computer Engineering student from PHINMA - UNIVERSITY OF PANGASINAN.</p>
-            <!-- From Uiverse.io by Juanes200122 --> 
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <!-- From Uiverse.io by Juanes200122 --> 
 <svg
 id="svg_svg"
 xmlns="http://www.w3.org/2000/svg"
@@ -905,39 +654,41 @@ width="477"
 </defs>
 </svg>
 
+    <div class="intro-content">
+      <h1>Welcome! I'm Ian Joseph Alvarado</h1>
+      <p>A passionate Computer Engineering student from PHINMA - UNIVERSITY OF PANGASINAN.</p>
+      <div class="button-wrapper">
+        <a href="1stpage.html" style="text-decoration: none;">
+          <button class="animated-button">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+            </svg>
+            <span class="text">Next Page</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+            </svg>
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
 
-            <div class="button-wrapper">
-                <a href="1stpage.html" style="text-decoration: none;">
-                    <button class="animated-button">
-                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                        </svg>
-                        <span class="text">Modern Button</span>
-                        <span class="circle"></span>
-                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                        </svg>
-                    </button>
-                </a>
-            </div>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ian Joseph Alvarado. All Rights Reserved.</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Ian Joseph Alvarado. All Rights Reserved.</p>
-    </footer>
+  <!-- Dark Mode Script -->
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const body = document.body;
 
-    <!-- Dark Mode Script -->
-    <script>
-        const toggleBtn = document.getElementById('darkModeToggle');
-        const body = document.body;
-
-        toggleBtn.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            toggleBtn.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
-        });
-    </script>
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      toggleBtn.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
 
 </body>
 </html>
