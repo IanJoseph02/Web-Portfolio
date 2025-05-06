@@ -1,0 +1,81 @@
+
+    <!-- Main Content (About Section) -->
+    <div class="content">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a motivated college student pursuing a Bachelor of Science in Computer Engineering at PHINMA University of Pangasinan. With a keen interest in learning and technology, I strive to innovate and solve real-world problems through my academic projects.</p>
+        </section>
+    </div>
+
+</body>
+</html>
+
+<section id="skills">
+    <h2>HOBBIES</h2>
+    <ul>
+        <li>Eat, Sleep, Game</li>
+        <li>PARKING AUTHENTICATION SESSION SYSTEM</li>
+        <li>DATABASE STUDENT AND MANAGEMENT</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+        <h3>Smart Water Monitoring System</h3>
+        <p>An IoT-based system to track water levels in real-time using sensors and microcontrollers.</p>
+    </div>
+    <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>My personal portfolio to showcase academic background, projects, and contact details.</p>
+    </div>
+    <div class="card">
+        <h3>Weather App</h3>
+        <p>Built using HTML, CSS, and JS, it fetches real-time weather data from an external API.</p>
+    </div>
+</section>
+
+
+
+<section id="education">
+    <h2>Education</h2>
+    <p><strong>Bachelor of Science in Computer Engineering</strong><br>
+    PHINMA UNIVERSITY OF PANGASINAN</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p class="contact-info">
+        Email: <a href="mailto:alvaradojoseph312002@gmail.com">alvaradojoseph312002@gmail.com</a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/ian-alvarado-98814a233/" target="_blank">linkedin.com/in/ian-alvarado</a><br>
+        Facebook: <a href="https://www.facebook.com/IanJoseph02/" target="_blank">facebook.com/IanJoseph02</a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2025 MY PORTFOLIO. All rights reserved.</p>
+</footer>
+
+<button id="backToTop" onclick="scrollToTop()">↑</button>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+
+    window.onscroll = function () {
+        const btn = document.getElementById("backToTop");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

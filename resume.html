@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Resume</title>
+    <link rel="stylesheet" href="intro.css">
+</head>
+<body class="dark-theme">
+
+    <div class="theme-switch-wrapper top-right">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" checked />
+            <div class="slider round"></div>
+        </label>
+        <em>Dark Mode</em>
+    </div>
+
+    <div class="resume-container">
+        <h1>MY RESUME</h1>
+        <a class="resume-link" href="Resume alvarado.pdf" target="_blank">View</a>
+        <a class="back-home" href="Secondpage.html">← Back to Home</a>
+    </div>
+<!-- From Uiverse.io by fox-tech0 --> 
+<div aria-busy="true" aria-label="Loading" role="progressbar" class="container">
+    <div class="swing">
+        <div class="swing-l"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="swing-r"></div>
+    </div>
+    <div class="shadow">
+        <div class="shadow-l"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="shadow-r"></div>
+    </div>
+</div>
+    <script>
+        const checkbox = document.getElementById('checkbox');
+        const body = document.body;
+
+        checkbox.addEventListener('change', () => {
+            body.classList.toggle('dark-theme');
+        });
+    </script>
+
+</body>
+</html>
